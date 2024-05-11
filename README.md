@@ -1,18 +1,57 @@
-## Getting Started
+## **Introduction**
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This project aims to make me comfortable with a basic computer system and its functionalities using JAVA. 
 
-## Folder Structure
+___
 
-The workspace contains two folders by default, where:
+## **Description**
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+CPU emulator software that supports a basic instruction set given below. I assumed that the computer has 256 bytes of available memory (M) initially set to zero. Emulator loads a program code from a text file. 
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+The following example code is an app that can compute the sum of the numbers between 0 and 20. 
+___
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+**A Hello world app that computes the sum of the numbers between 0 to 20**
 
-## Dependency Management
+0 START
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+1 LOAD 20
+
+2 STORE 200
+
+3 LOAD 0
+
+4 STORE 201
+
+5 STORE 202
+
+6 CMPM 200
+
+7 CJMP 15
+
+8 LOADM 202
+
+9 ADDM 201
+
+10 STORE 202
+
+11 LOADM 201
+
+12 ADD 1
+
+13 STORE 201
+
+14 JMP 6
+
+15 LOADM 202
+
+16 DISP
+
+17 HALT
+___
+
+The output will be:
+
+Accumulator after LOADM: 210 \
+Accumulator after all program executed: 210 \
+Program halted.
